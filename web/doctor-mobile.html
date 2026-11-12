@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Doctor workspace · Mobile design review</title>
+    <style>
+      body {
+        margin: 0;
+        background: #eaf0f6;
+        font:
+          14px Arial,
+          sans-serif;
+        color: #34455f;
+      }
+      header {
+        padding: 24px 35px;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 0 0 8px;
+      }
+      p {
+        font-size: 12px;
+        color: #8191a7;
+        margin: 0;
+      }
+      .screens {
+        display: flex;
+        gap: 24px;
+        padding: 8px 35px 35px;
+        width: max-content;
+      }
+      .phone {
+        width: 374px;
+        border-radius: 24px;
+        border: 7px solid #28344b;
+        background: white;
+        overflow: hidden;
+        box-shadow: 0 12px 26px #28344b20;
+      }
+      .label {
+        font: 11px Arial;
+        background: #28344b;
+        color: #cedbe9;
+        text-align: center;
+        padding: 9px 4px 14px;
+      }
+      iframe {
+        display: block;
+        width: 360px;
+        height: 760px;
+        border: 0;
+      }
+      a {
+        color: #188eaf;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Care from the other side.</h1>
+      <p>
+        Doctor workspace · Three live mobile-width browser views · Native
+        Android build pending approval ·
+        <a href="/#pro/dashboard">Open workspace</a>
+      </p>
+    </header>
+    <div class="screens">
+      <div class="phone">
+        <div class="label">01 / OVERVIEW</div>
+        <iframe
+          title="Doctor overview mobile"
+          src="index.html#pro/dashboard"
+        ></iframe>
+      </div>
+      <div class="phone">
+        <div class="label">02 / CONSULTATION WORKSPACE</div>
+        <iframe
+          title="Doctor chat mobile"
+          src="index.html#pro/chat/DEMO-10482"
+        ></iframe>
+      </div>
+      <div class="phone">
+        <div class="label">03 / SUMMARY & RX</div>
+        <iframe
+          title="Doctor document mobile"
+          src="index.html#pro/editor/DEMO-10482"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+# Local credentials, identity and signing material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+google-services.json
+.openai/credentials*
+# Dependencies and generated output
+node_modules/
+dist/
+artifacts/
+output/
+tmp/
+__pycache__/
+*.pyc
+# Android local settings, caches and packaging outputs
+android/local.properties
+android/.gradle/
+android/.kotlin/
+android/**/build/
+*.apk
+*.aab
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
