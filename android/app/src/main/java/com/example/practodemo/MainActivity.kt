@@ -737,7 +737,7 @@ private fun DoctorLabel(name: String, subtitle: String, doctor: Doctor?) {
 private fun HomeScreen(data: SavedData, seed: SeedData, role: String, go: (String) -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(22.dp)) {
         OutlinedButton(onClick = { go("pro") }, modifier = Modifier.fillMaxWidth()) {
-            Text("Doctor workspace · 10 demo profiles", fontSize = 12.sp)
+            Text("Doctor workspace · 20 demo profiles", fontSize = 12.sp)
         }
 
         Column {
@@ -1371,7 +1371,7 @@ private fun AccountScreen(
         DoctorLabel(data.patient.name, "${data.patient.age} years · Fictional patient", null)
         TextButton(onClick = edit) { Text("View and edit profile") }
         listOf(
-                "pro" to "Doctor workspace · 10 demo profiles",
+                "pro" to "Doctor workspace · 20 demo profiles",
                 "family" to "Family members",
                 "appointments" to "Appointments",
                 "tests" to "Test bookings",

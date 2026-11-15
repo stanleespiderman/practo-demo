@@ -390,7 +390,7 @@ fun DoctorWorkspace(
                                         }
                                     }
                                     ProHint(
-                                        "10 fictional doctors. Persistent local records. No real clinical service is connected."
+                                        "20 fictional doctors. Persistent local records. No real clinical service is connected."
                                     )
                                 }
                             }

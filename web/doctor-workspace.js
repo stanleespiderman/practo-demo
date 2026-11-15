@@ -1,7 +1,16 @@
+import {
+  renderPrescription,
+  prescriptionPdf,
+  downloadCanvasPng,
+} from "./prescription.js";
 /* Doctor workspace. Every workflow is a local, fictional demo; no clinical service is connected. */
 export function createDoctorWorkspace(api) {
   const { I, esc, avatar, fmt, toast, modal } = api;
-  let selected = sessionStorage.getItem("practo-doctor-id") || "doc-ananya";
+  // ?doctor=<id> pins the starting doctor (used by the fixed mobile review frames).
+  let selected =
+    new URLSearchParams(location.search).get("doctor") ||
+    sessionStorage.getItem("practo-doctor-id") ||
+    "doc-ananya";
   let page = "dashboard",
     id = "",
     tab = "all",
@@ -93,7 +102,7 @@ export function createDoctorWorkspace(api) {
       )
       .join(
         "",
-      )}</select><nav>${nav.map(([path, icon, text]) => `<button class="pro-nav ${page === path || (path === "consultations" && page === "chat") || (path === "patients" && page === "patient") ? "selected" : ""}" data-pro-go="${path}">${I(icon)}${text}${path === "consultations" && st.waiting ? `<span>${st.waiting}</span>` : ""}</button>`).join("")}</nav><div class="pro-sidebar-bottom"><button data-pro-action="patient-app" class="pro-nav">${I("logout")}Patient app</button><span class="pro-local">● &nbsp; LOCAL DEMO WORKSPACE</span></div></aside><main class="pro-main"><header class="pro-topbar"><div><span class="pro-breadcrumb">My practice</span>${I("chevron")}<strong>${esc(nav.find((n) => n[0] === page)?.[2] || (page === "chat" ? "Consultation workspace" : page === "patient" ? "Patient chart" : "Document editor"))}</strong></div><div class="pro-top-actions"><button class="icon-button" data-action="controls" aria-label="Demo controls">${I("settings")}</button><button class="pro-switch-mobile" data-pro-action="switch-doctor">${I("users")}Switch doctor</button><button class="pro-ghost" data-pro-action="patient-app">Patient app ${I("arrow")}</button><span class="pro-divider"></span>${avatar(dr)}<span class="pro-top-doctor"><b>${esc(dr.name)}</b><small>${esc(dr.specialty)}</small></span></div></header><div class="pro-body">${body}</div><nav class="pro-mobile-nav">${[
+      )}</select><nav>${nav.map(([path, icon, text]) => `<button class="pro-nav ${page === path || (path === "consultations" && page === "chat") || (path === "patients" && page === "patient") ? "selected" : ""}" data-pro-go="${path}">${I(icon)}${text}${path === "consultations" && st.waiting ? `<span>${st.waiting}</span>` : ""}</button>`).join("")}</nav><div class="pro-sidebar-bottom"><button data-pro-action="patient-app" class="pro-nav">${I("logout")}Patient app</button><span class="pro-local">● &nbsp; LOCAL DEMO WORKSPACE</span></div></aside><main class="pro-main"><header class="pro-topbar"><div><span class="pro-breadcrumb">My practice</span>${I("chevron")}<strong>${esc(nav.find((n) => n[0] === page)?.[2] || (page === "chat" ? "Consultation workspace" : page === "patient" ? "Patient chart" : page === "editor" ? "Document editor" : "Page not found"))}</strong></div><div class="pro-top-actions"><button class="icon-button" data-action="controls" aria-label="Demo controls">${I("settings")}</button><button class="pro-switch-mobile" data-pro-action="switch-doctor">${I("users")}Switch doctor</button><button class="pro-ghost" data-pro-action="patient-app">Patient app ${I("arrow")}</button><span class="pro-divider"></span>${avatar(dr)}<span class="pro-top-doctor"><b>${esc(dr.name)}</b><small>${esc(dr.specialty)}</small></span></div></header><div class="pro-body">${body}</div><nav class="pro-mobile-nav">${[
       ["dashboard", "home", "Overview"],
       ["calendar", "calendar", "Calendar"],
       ["consultations", "chat", "Consults"],
@@ -345,7 +354,10 @@ export function createDoctorWorkspace(api) {
   }
   function profile() {
     const dr = D();
-    return `${heading("My doctor profile", "Fictional identity and practice preferences. Changes appear in the patient app.")}<form id="pro-profile-form" class="pro-card pro-form" style="max-width:850px"><div class="pro-profile-head">${avatar(dr)}<div><h2>${esc(dr.name)}</h2><p>${dr.demoCode} · Fictional profile</p></div></div><div class="pro-form-row"><label>Display name<input name="name" required maxlength="70" value="${esc(dr.name)}"></label><label>Speciality<input name="specialty" required maxlength="70" value="${esc(dr.specialty)}"></label></div><label>Qualifications (fictional)<input name="qualification" required maxlength="120" value="${esc(dr.qualification)}"></label><div class="pro-form-row"><label>Experience (years)<input name="experience" type="number" min="0" max="60" required value="${dr.experience}"></label><label>Demo fee (₹)<input name="fee" type="number" min="0" max="100000" required value="${dr.fee}"></label></div><div class="pro-form-row"><label>Clinic name<input name="clinic" required maxlength="100" value="${esc(dr.clinic)}"></label><label>Working hours<input name="workHours" maxlength="60" value="${esc(dr.workHours || "09:00–18:00")}"></label></div><label>Profile bio<textarea name="bio" rows="4" maxlength="1500">${esc(dr.bio || "")}</textarea></label><label class="pro-checkbox"><input name="available" type="checkbox" ${dr.available ? "checked" : ""}>Available in demo</label><button class="pro-primary" type="submit">${I("check")}Save profile</button><p class="pro-hint">No registration numbers, verification badges or real credentials are created.</p></form>`;
+    return `${heading("My doctor profile", "Fictional identity and practice preferences. Changes appear in the patient app.")}<form id="pro-profile-form" class="pro-card pro-form" style="max-width:850px"><div class="pro-profile-head">${avatar(dr)}<div><h2>${esc(dr.name)}</h2><p>${dr.demoCode} · ${dr.age ? dr.age + " years · " : ""}Fictional profile</p></div></div><div class="pro-form-row"><label>Display name<input name="name" required maxlength="70" value="${esc(dr.name)}"></label><label>Speciality<input name="specialty" required maxlength="70" value="${esc(dr.specialty)}"></label></div><label>Qualifications (fictional)<input name="qualification" required maxlength="120" value="${esc(dr.qualification)}"></label><div class="pro-form-row"><label>Experience (years)<input name="experience" type="number" min="0" max="60" required value="${dr.experience}"></label><label>Demo fee (₹)<input name="fee" type="number" min="0" max="100000" required value="${dr.fee}"></label></div><div class="pro-form-row"><label>Clinic name<input name="clinic" required maxlength="100" value="${esc(dr.clinic)}"></label><label>Working hours<input name="workHours" maxlength="60" value="${esc(dr.workHours || "09:00–18:00")}"></label></div><label>Profile bio<textarea name="bio" rows="4" maxlength="1500">${esc(dr.bio || "")}</textarea></label><label class="pro-checkbox"><input name="available" type="checkbox" ${dr.available ? "checked" : ""}>Available in demo</label><button class="pro-primary" type="submit">${I("check")}Save profile</button><p class="pro-hint">No registration numbers, verification badges or real credentials are created.</p></form>`;
+  }
+  function pageNotFound() {
+    return '<div class="pro-empty pro-card"><h3>Page not found</h3><p>This workspace page does not exist.</p><button class="pro-primary" data-pro-go="dashboard">Back to overview</button></div>';
   }
   function noAccess() {
     return '<div class="pro-empty pro-card"><h3>This record is not in this doctor’s workspace</h3><p>Select an assigned patient or consultation.</p><button class="pro-primary" data-pro-go="consultations">Open consultation inbox</button></div>';
@@ -400,7 +412,7 @@ export function createDoctorWorkspace(api) {
                                   ? inventory()
                                   : page === "profile"
                                     ? profile()
-                                    : noAccess();
+                                    : pageNotFound();
     document.querySelector("#app").innerHTML = shell(body);
     bind();
     if (page === "chat")
@@ -580,16 +592,17 @@ export function createDoctorWorkspace(api) {
     const dr = S().doctors.find((d) => d.id === doc.doctorId),
       p = patient(doc.patientId),
       pro = location.hash.startsWith("#pro");
+    const sheet = sheetPreview(doc);
     modal(
       "Demo medical document",
-      `<div class="pro-document-preview"><div class="pro-document-watermark">DEMO — NOT VALID FOR MEDICAL USE</div><h2>${esc(doc.title)}</h2><p>${esc(doc.type)} · ${doc.id}</p><dl><div><dt>Fictional patient</dt><dd>${esc(p.name)} · ${p.age} years</dd></div><div><dt>Fictional doctor</dt><dd>${esc(dr.name)} · ${esc(dr.specialty)}</dd></div><div><dt>Consultation</dt><dd>${doc.consultationId} · ${fmt(doc.createdAt)}</dd></div></dl>${
+      `${sheet || ""}<div class="pro-document-preview${sheet ? " pro-sr-only" : ""}"><div class="pro-document-watermark">DEMO — NOT VALID FOR MEDICAL USE</div><h2>${esc(doc.title)}</h2><p>${esc(doc.type)} · ${doc.id}</p><dl><div><dt>Fictional patient</dt><dd>${esc(p.name)} · ${p.age} years</dd></div><div><dt>Fictional doctor</dt><dd>${esc(dr.name)} · ${esc(dr.specialty)}</dd></div><div><dt>Consultation</dt><dd>${doc.consultationId} · ${fmt(doc.createdAt)}</dd></div></dl>${
         documentFields(doc)
           .map(
             ([t, v]) =>
               `<section><h4>${t}</h4><p>${esc(v).replace(/\n/g, "<br>")}</p></section>`,
           )
           .join("") || "<p>No clinical content entered.</p>"
-      }<div class="pro-document-watermark">SIMULATED DOCUMENT · NO SIGNATURE · NO CLINICAL VALIDITY</div></div><div class="pro-modal-actions"><button class="outline-btn" data-pro-export="${doc.id}">${I("file")}Download demo PDF</button>${pro && doc.status === "draft" ? `<button class="outline-btn" data-pro-go="editor/${doc.consultationId}/${doc.id}">Edit draft</button><button class="primary-btn" data-pro-share="${doc.id}">Share in local chat</button>` : `<span class="pro-status shared">Shared locally</span>`}</div>`,
+      }<div class="pro-document-watermark">SIMULATED DOCUMENT · NO SIGNATURE · NO CLINICAL VALIDITY</div></div><div class="pro-modal-actions"><button class="outline-btn" data-pro-export="${doc.id}">${I("file")}Download demo PDF</button><button class="outline-btn" data-pro-export-image="${doc.id}">${I("file")}Download image</button>${pro && doc.status === "draft" ? `<button class="outline-btn" data-pro-go="editor/${doc.consultationId}/${doc.id}">Edit draft</button><button class="primary-btn" data-pro-share="${doc.id}">Share in local chat</button>` : `<span class="pro-status shared">Shared locally</span>`}</div>`,
     );
   }
   function shareDocument(docId) {
@@ -627,83 +640,68 @@ export function createDoctorWorkspace(api) {
       toast("Demo document shared in the patient’s local chat");
     }
   }
+  function sheetModel(doc) {
+    const dr = S().doctors.find((d) => d.id === doc.doctorId),
+      p = patient(doc.patientId);
+    return {
+      id: doc.id,
+      date: fmt(doc.createdAt),
+      doctor: {
+        name: dr.name,
+        line1: dr.specialty,
+        line2: `${dr.clinic}, ${dr.area} - ${S().profile.city}`,
+        reg: "Demo registration: " + dr.demoCode,
+      },
+      patient: { name: p.name, meta: `${p.age} years · ${p.gender}` },
+      complaint: doc.complaint,
+      observations: doc.observations,
+      assessment: doc.assessment,
+      medicines: doc.medicines,
+      tests: doc.tests,
+      advice: doc.advice,
+      followUp: doc.followUp,
+      footer: "DEMO ONLY — NO CLINICAL VALIDITY · " + doc.consultationId,
+    };
+  }
+  function sheetPreview(doc) {
+    try {
+      const url = renderPrescription(sheetModel(doc), 1.5).toDataURL(
+        "image/jpeg",
+        0.9,
+      );
+      return `<div class="rx-preview"><img src="${url}" alt="Demo prescription for ${esc(doc.title)}. Not valid for medical use."></div>`;
+    } catch {
+      return "";
+    }
+  }
   function exportPdf(docId) {
     const doc = getDocument(docId);
     if (!doc) return;
-    const JsPDF = window.jspdf?.jsPDF;
-    if (!JsPDF) {
+    const JsPdf = window.jspdf?.jsPDF;
+    if (!JsPdf) {
       toast("PDF module is unavailable. Reload the page.");
       return;
     }
-    const pdf = new JsPDF({ unit: "mm", format: "a4" }),
-      dr = S().doctors.find((d) => d.id === doc.doctorId),
-      p = patient(doc.patientId);
-    let y = 32;
-    const banner = () => {
-      pdf.setFillColor(255, 241, 215);
-      pdf.rect(10, 9, 190, 12, "F");
-      pdf.setFontSize(10);
-      pdf.setTextColor(150, 91, 30);
-      pdf.setFont("helvetica", "bold");
-      pdf.text("DEMO - NOT VALID FOR MEDICAL USE", 105, 17, {
-        align: "center",
-      });
-      pdf.setTextColor(40, 45, 70);
-      pdf.setFont("helvetica", "normal");
-    };
-    banner();
-    function lines(text, size = 11, bold = false) {
-      pdf.setFont("helvetica", bold ? "bold" : "normal");
-      pdf.setFontSize(size);
-      for (const line of pdf.splitTextToSize(
-        String(text).replace(/[^\x20-\x7E\n]/g, "-"),
-        178,
-      )) {
-        if (y > 271) {
-          pdf.addPage();
-          banner();
-          y = 32;
-        }
-        pdf.text(line, 16, y);
-        y += size * 0.48 + 1.5;
-      }
-      y += 3;
-    }
-    lines(doc.title, 18, true);
-    lines(doc.type + " | " + doc.id, 10);
-    lines(
-      "Fictional patient: " + p.name + " | " + p.age + " years | " + p.gender,
-    );
-    lines("Fictional doctor: " + dr.name + " | " + dr.specialty);
-    lines(
-      "Consultation: " +
-        doc.consultationId +
-        " | Created " +
-        fmt(doc.createdAt),
-      10,
-    );
-    for (const [title, value] of documentFields(doc)) {
-      lines(title, 11, true);
-      lines(value, 10);
-    }
-    lines(
-      "Simulated document. No real signature or registration number. Not a prescription, medical certificate or instruction valid for clinical or administrative use.",
-      10,
-      true,
-    );
-    const pages = pdf.getNumberOfPages();
-    for (let i = 1; i <= pages; i++) {
-      pdf.setPage(i);
-      pdf.setFontSize(8);
-      pdf.setTextColor(140, 100, 60);
-      pdf.text(
-        "DEMO ONLY - NO CLINICAL VALIDITY | Page " + i + " of " + pages,
-        105,
-        288,
-        { align: "center" },
+    try {
+      prescriptionPdf(JsPdf, renderPrescription(sheetModel(doc))).save(
+        doc.id + ".pdf",
       );
+    } catch {
+      toast("Could not create the PDF. Try Download image instead.");
     }
-    pdf.save(doc.id + ".pdf");
+  }
+  async function exportImage(docId) {
+    const doc = getDocument(docId);
+    if (!doc) return;
+    try {
+      const ok = await downloadCanvasPng(
+        renderPrescription(sheetModel(doc)),
+        doc.id + ".png",
+      );
+      if (!ok) toast("Could not create the image. Try again.");
+    } catch {
+      toast("Could not create the image. Try again.");
+    }
   }
   function modalForm(title, body, submit) {
     modal(
@@ -928,6 +926,10 @@ export function createDoctorWorkspace(api) {
     }
     if (b.dataset.proExport) {
       exportPdf(b.dataset.proExport);
+      return;
+    }
+    if (b.dataset.proExportImage) {
+      exportImage(b.dataset.proExportImage);
       return;
     }
     if (!location.hash.startsWith("#pro")) return;

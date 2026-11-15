@@ -13,6 +13,7 @@
       "name": "Dr. Ananya Rao",
       "specialty": "General Physician",
       "qualification": "MBBS, MD · General Medicine",
+      "age": 40,
       "experience": 12,
       "fee": 499,
       "rating": 98,
@@ -36,6 +37,7 @@
       "name": "Dr. Rohan Shah",
       "specialty": "Dermatologist",
       "qualification": "MBBS, MD · Dermatology",
+      "age": 37,
       "experience": 9,
       "fee": 599,
       "rating": 97,
@@ -59,6 +61,7 @@
       "name": "Dr. Meera Iyer",
       "specialty": "Dentist",
       "qualification": "BDS, MDS · Dentistry",
+      "age": 38,
       "experience": 11,
       "fee": 450,
       "rating": 99,
@@ -82,6 +85,7 @@
       "name": "Dr. Kabir Sethi",
       "specialty": "Orthopedist",
       "qualification": "MBBS, MS · Orthopaedics",
+      "age": 42,
       "experience": 14,
       "fee": 700,
       "rating": 96,
@@ -105,6 +109,7 @@
       "name": "Dr. Nisha Kapoor",
       "specialty": "Gynecologist",
       "qualification": "MBBS, MS · Obstetrics & Gynaecology",
+      "age": 41,
       "experience": 13,
       "fee": 650,
       "color": "pink",
@@ -128,6 +133,7 @@
       "name": "Dr. Arjun Menon",
       "specialty": "Pediatrician",
       "qualification": "MBBS, MD · Paediatrics",
+      "age": 38,
       "experience": 10,
       "fee": 550,
       "color": "yellow",
@@ -151,6 +157,7 @@
       "name": "Dr. Kavya Nair",
       "specialty": "ENT Specialist",
       "qualification": "MBBS, MS · ENT",
+      "age": 36,
       "experience": 8,
       "fee": 500,
       "color": "green",
@@ -174,6 +181,7 @@
       "name": "Dr. Vihaan Desai",
       "specialty": "Psychiatrist",
       "qualification": "MBBS, MD · Psychiatry",
+      "age": 39,
       "experience": 11,
       "fee": 900,
       "color": "lavender",
@@ -197,6 +205,7 @@
       "name": "Dr. Isha Malhotra",
       "specialty": "Cardiologist",
       "qualification": "MBBS, MD, DM · Cardiology",
+      "age": 44,
       "experience": 15,
       "fee": 1000,
       "color": "pink",
@@ -220,6 +229,7 @@
       "name": "Dr. Dev Kulkarni",
       "specialty": "Ophthalmologist",
       "qualification": "MBBS, MS · Ophthalmology",
+      "age": 40,
       "experience": 12,
       "fee": 600,
       "color": "blue",
@@ -237,6 +247,246 @@
       "available": true,
       "workHours": "09:00–18:00",
       "demoCode": "DEMO-DOC-10"
+    },
+    {
+      "id": "doc-sanjay",
+      "name": "Dr. Sanjay Bhatia",
+      "specialty": "Gastroenterologist",
+      "qualification": "MBBS, MD, DM · Gastroenterology",
+      "age": 52,
+      "experience": 24,
+      "fee": 1100,
+      "rating": 97,
+      "stories": 118,
+      "color": "green",
+      "initials": "SB",
+      "clinic": "Digest Well Gastro Centre",
+      "area": "Sector 51",
+      "gender": "male",
+      "bio": "Fictional gastroenterologist profile focused on digestive and liver health, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-11"
+    },
+    {
+      "id": "doc-pooja",
+      "name": "Dr. Pooja Khanna",
+      "specialty": "Clinical Psychologist",
+      "qualification": "MA, PhD · Clinical Psychology",
+      "age": 38,
+      "experience": 12,
+      "fee": 900,
+      "rating": 96,
+      "stories": 76,
+      "color": "lavender",
+      "initials": "PK",
+      "clinic": "Calm Minds Therapy Studio",
+      "area": "Sector 29",
+      "gender": "female",
+      "bio": "Fictional clinical psychologist profile focused on counselling and mental wellbeing, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-12"
+    },
+    {
+      "id": "doc-rajiv",
+      "name": "Dr. Rajiv Chawla",
+      "specialty": "Orthopedic Surgeon",
+      "qualification": "MBBS, MS · Orthopaedics, Fellowship · Joint Replacement",
+      "age": 55,
+      "experience": 28,
+      "fee": 1200,
+      "rating": 98,
+      "stories": 142,
+      "color": "blue",
+      "initials": "RC",
+      "clinic": "Boneworks Joint & Spine Centre",
+      "area": "Sector 38",
+      "gender": "male",
+      "bio": "Fictional orthopedic surgeon profile focused on joint, spine and bone care, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-13"
+    },
+    {
+      "id": "doc-shalini",
+      "name": "Dr. Shalini Verma",
+      "specialty": "Obstetrician & Gynecologist",
+      "qualification": "MBBS, DNB · Obstetrics & Gynaecology",
+      "age": 47,
+      "experience": 19,
+      "fee": 800,
+      "rating": 97,
+      "stories": 131,
+      "color": "pink",
+      "initials": "SV",
+      "clinic": "Motherhood Women’s Care Clinic",
+      "area": "Sector 14",
+      "gender": "female",
+      "bio": "Fictional obstetrician & gynecologist profile focused on women’s health and pregnancy care, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-14"
+    },
+    {
+      "id": "doc-harpreet",
+      "name": "Dr. Harpreet Gill",
+      "specialty": "Pulmonologist",
+      "qualification": "MBBS, MD · Pulmonary Medicine",
+      "age": 44,
+      "experience": 16,
+      "fee": 850,
+      "rating": 95,
+      "stories": 64,
+      "color": "yellow",
+      "initials": "HG",
+      "clinic": "Breathwell Chest Clinic",
+      "area": "Sector 21",
+      "gender": "male",
+      "bio": "Fictional pulmonologist profile focused on lung and breathing care, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-15"
+    },
+    {
+      "id": "doc-anjali",
+      "name": "Dr. Anjali Deshmukh",
+      "specialty": "Endocrinologist",
+      "qualification": "MBBS, MD, DM · Endocrinology",
+      "age": 41,
+      "experience": 13,
+      "fee": 950,
+      "rating": 96,
+      "stories": 89,
+      "color": "peach",
+      "initials": "AD",
+      "clinic": "Sugar & Thyroid Care Centre",
+      "area": "Sector 31",
+      "gender": "female",
+      "bio": "Fictional endocrinologist profile focused on diabetes and thyroid care, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-16"
+    },
+    {
+      "id": "doc-mohit",
+      "name": "Dr. Mohit Agarwal",
+      "specialty": "Neurologist",
+      "qualification": "MBBS, MD, DM · Neurology",
+      "age": 50,
+      "experience": 22,
+      "fee": 1300,
+      "rating": 97,
+      "stories": 102,
+      "color": "lavender",
+      "initials": "MA",
+      "clinic": "NeuroCare Clinic",
+      "area": "Sector 42",
+      "gender": "male",
+      "bio": "Fictional neurologist profile focused on brain and nerve care, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-17"
+    },
+    {
+      "id": "doc-imran",
+      "name": "Dr. Imran Qureshi",
+      "specialty": "Urologist",
+      "qualification": "MBBS, MS, MCh · Urology",
+      "age": 46,
+      "experience": 18,
+      "fee": 1000,
+      "rating": 95,
+      "stories": 71,
+      "color": "blue",
+      "initials": "IQ",
+      "clinic": "Urocare Clinic",
+      "area": "Sector 52",
+      "gender": "male",
+      "bio": "Fictional urologist profile focused on urinary and kidney stone care, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-18"
+    },
+    {
+      "id": "doc-neha",
+      "name": "Dr. Neha Saxena",
+      "specialty": "Rheumatologist",
+      "qualification": "MBBS, MD, DM · Rheumatology",
+      "age": 39,
+      "experience": 11,
+      "fee": 900,
+      "rating": 96,
+      "stories": 58,
+      "color": "green",
+      "initials": "NS",
+      "clinic": "JointEase Rheumatology Clinic",
+      "area": "Sector 46",
+      "gender": "female",
+      "bio": "Fictional rheumatologist profile focused on arthritis and autoimmune care, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-19"
+    },
+    {
+      "id": "doc-farah",
+      "name": "Dr. Farah Siddiqui",
+      "specialty": "Dietitian & Nutritionist",
+      "qualification": "MSc, PhD · Clinical Nutrition",
+      "age": 35,
+      "experience": 9,
+      "fee": 600,
+      "rating": 94,
+      "stories": 47,
+      "color": "pink",
+      "initials": "FS",
+      "clinic": "Nourish Gut & Diet Clinic",
+      "area": "Sector 55",
+      "gender": "female",
+      "bio": "Fictional dietitian & nutritionist profile focused on diet and digestive wellness, created for testing the clinical workspace.",
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "available": true,
+      "workHours": "09:00–18:00",
+      "demoCode": "DEMO-DOC-20"
     }
   ],
   "consultations": [
@@ -435,6 +685,186 @@
       "patientId": "patient-demo",
       "status": "completed",
       "date": "2026-11-04T14:30:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-11A",
+      "doctorId": "doc-sanjay",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T09:30:00+05:30",
+      "reason": "Demo gastroenterologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-11B",
+      "doctorId": "doc-sanjay",
+      "patientId": "patient-ved",
+      "status": "active",
+      "date": "2026-11-04T13:00:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-12A",
+      "doctorId": "doc-pooja",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T10:15:00+05:30",
+      "reason": "Demo clinical psychologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-12B",
+      "doctorId": "doc-pooja",
+      "patientId": "patient-mira",
+      "status": "active",
+      "date": "2026-11-04T13:45:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-13A",
+      "doctorId": "doc-rajiv",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T11:00:00+05:30",
+      "reason": "Demo orthopedic surgeon consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-13B",
+      "doctorId": "doc-rajiv",
+      "patientId": "patient-aman",
+      "status": "active",
+      "date": "2026-11-04T14:30:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-14A",
+      "doctorId": "doc-shalini",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T11:45:00+05:30",
+      "reason": "Demo obstetrician & gynecologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-14B",
+      "doctorId": "doc-shalini",
+      "patientId": "patient-riya",
+      "status": "active",
+      "date": "2026-11-04T15:15:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-15A",
+      "doctorId": "doc-harpreet",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T12:15:00+05:30",
+      "reason": "Demo pulmonologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-15B",
+      "doctorId": "doc-harpreet",
+      "patientId": "patient-yash",
+      "status": "active",
+      "date": "2026-11-04T16:00:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-16A",
+      "doctorId": "doc-anjali",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T14:00:00+05:30",
+      "reason": "Demo endocrinologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-16B",
+      "doctorId": "doc-anjali",
+      "patientId": "patient-neel",
+      "status": "active",
+      "date": "2026-11-04T10:30:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-17A",
+      "doctorId": "doc-mohit",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T14:45:00+05:30",
+      "reason": "Demo neurologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-17B",
+      "doctorId": "doc-mohit",
+      "patientId": "patient-ved",
+      "status": "active",
+      "date": "2026-11-04T11:15:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-18A",
+      "doctorId": "doc-imran",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T15:30:00+05:30",
+      "reason": "Demo urologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-18B",
+      "doctorId": "doc-imran",
+      "patientId": "patient-aman",
+      "status": "active",
+      "date": "2026-11-04T12:00:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-19A",
+      "doctorId": "doc-neha",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T16:15:00+05:30",
+      "reason": "Demo rheumatologist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-19B",
+      "doctorId": "doc-neha",
+      "patientId": "patient-sana",
+      "status": "active",
+      "date": "2026-11-04T12:45:00+05:30",
+      "reason": "Fictional follow-up visit",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-20A",
+      "doctorId": "doc-farah",
+      "patientId": "patient-demo",
+      "status": "active",
+      "date": "2026-11-04T17:00:00+05:30",
+      "reason": "Demo dietitian & nutritionist consultation",
+      "type": "Online consultation"
+    },
+    {
+      "id": "DEMO-PRO-20B",
+      "doctorId": "doc-farah",
+      "patientId": "patient-sana",
+      "status": "active",
+      "date": "2026-11-04T17:30:00+05:30",
       "reason": "Fictional follow-up visit",
       "type": "Online consultation"
     }
@@ -638,6 +1068,166 @@
       "sender": "patient",
       "text": "This is a fictional patient conversation for testing your doctor workspace.",
       "timestamp": 1793773140000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-10-1",
+      "consultationId": "DEMO-PRO-11A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793769600000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-10-2",
+      "consultationId": "DEMO-PRO-11B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773200000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-11-1",
+      "consultationId": "DEMO-PRO-12A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793769660000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-11-2",
+      "consultationId": "DEMO-PRO-12B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773260000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-12-1",
+      "consultationId": "DEMO-PRO-13A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793769720000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-12-2",
+      "consultationId": "DEMO-PRO-13B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773320000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-13-1",
+      "consultationId": "DEMO-PRO-14A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793769780000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-13-2",
+      "consultationId": "DEMO-PRO-14B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773380000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-14-1",
+      "consultationId": "DEMO-PRO-15A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793769840000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-14-2",
+      "consultationId": "DEMO-PRO-15B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773440000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-15-1",
+      "consultationId": "DEMO-PRO-16A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793769900000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-15-2",
+      "consultationId": "DEMO-PRO-16B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773500000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-16-1",
+      "consultationId": "DEMO-PRO-17A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793769960000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-16-2",
+      "consultationId": "DEMO-PRO-17B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773560000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-17-1",
+      "consultationId": "DEMO-PRO-18A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793770020000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-17-2",
+      "consultationId": "DEMO-PRO-18B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773620000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-18-1",
+      "consultationId": "DEMO-PRO-19A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793770080000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-18-2",
+      "consultationId": "DEMO-PRO-19B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773680000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-19-1",
+      "consultationId": "DEMO-PRO-20A",
+      "sender": "patient",
+      "text": "Hello doctor. I would like to try the consultation and medical record features.",
+      "timestamp": 1793770140000,
+      "status": "sent"
+    },
+    {
+      "id": "pro-seed-19-2",
+      "consultationId": "DEMO-PRO-20B",
+      "sender": "patient",
+      "text": "This is a fictional patient conversation for testing your doctor workspace.",
+      "timestamp": 1793773740000,
       "status": "sent"
     }
   ],
@@ -999,6 +1589,226 @@
       "mode": "In-clinic",
       "status": "scheduled",
       "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-11-0",
+      "doctorId": "doc-sanjay",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-11A",
+      "date": "2026-11-04",
+      "time": "09:30",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo gastroenterologist consultation"
+    },
+    {
+      "id": "DEMO-APT-11-1",
+      "doctorId": "doc-sanjay",
+      "patientId": "patient-ved",
+      "consultationId": "DEMO-PRO-11B",
+      "date": "2026-11-04",
+      "time": "13:00",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-12-0",
+      "doctorId": "doc-pooja",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-12A",
+      "date": "2026-11-04",
+      "time": "10:15",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo clinical psychologist consultation"
+    },
+    {
+      "id": "DEMO-APT-12-1",
+      "doctorId": "doc-pooja",
+      "patientId": "patient-mira",
+      "consultationId": "DEMO-PRO-12B",
+      "date": "2026-11-04",
+      "time": "13:45",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-13-0",
+      "doctorId": "doc-rajiv",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-13A",
+      "date": "2026-11-04",
+      "time": "11:00",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo orthopedic surgeon consultation"
+    },
+    {
+      "id": "DEMO-APT-13-1",
+      "doctorId": "doc-rajiv",
+      "patientId": "patient-aman",
+      "consultationId": "DEMO-PRO-13B",
+      "date": "2026-11-04",
+      "time": "14:30",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-14-0",
+      "doctorId": "doc-shalini",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-14A",
+      "date": "2026-11-04",
+      "time": "11:45",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo obstetrician & gynecologist consultation"
+    },
+    {
+      "id": "DEMO-APT-14-1",
+      "doctorId": "doc-shalini",
+      "patientId": "patient-riya",
+      "consultationId": "DEMO-PRO-14B",
+      "date": "2026-11-04",
+      "time": "15:15",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-15-0",
+      "doctorId": "doc-harpreet",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-15A",
+      "date": "2026-11-04",
+      "time": "12:15",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo pulmonologist consultation"
+    },
+    {
+      "id": "DEMO-APT-15-1",
+      "doctorId": "doc-harpreet",
+      "patientId": "patient-yash",
+      "consultationId": "DEMO-PRO-15B",
+      "date": "2026-11-04",
+      "time": "16:00",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-16-0",
+      "doctorId": "doc-anjali",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-16A",
+      "date": "2026-11-04",
+      "time": "14:00",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo endocrinologist consultation"
+    },
+    {
+      "id": "DEMO-APT-16-1",
+      "doctorId": "doc-anjali",
+      "patientId": "patient-neel",
+      "consultationId": "DEMO-PRO-16B",
+      "date": "2026-11-04",
+      "time": "10:30",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-17-0",
+      "doctorId": "doc-mohit",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-17A",
+      "date": "2026-11-04",
+      "time": "14:45",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo neurologist consultation"
+    },
+    {
+      "id": "DEMO-APT-17-1",
+      "doctorId": "doc-mohit",
+      "patientId": "patient-ved",
+      "consultationId": "DEMO-PRO-17B",
+      "date": "2026-11-04",
+      "time": "11:15",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-18-0",
+      "doctorId": "doc-imran",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-18A",
+      "date": "2026-11-04",
+      "time": "15:30",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo urologist consultation"
+    },
+    {
+      "id": "DEMO-APT-18-1",
+      "doctorId": "doc-imran",
+      "patientId": "patient-aman",
+      "consultationId": "DEMO-PRO-18B",
+      "date": "2026-11-04",
+      "time": "12:00",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-19-0",
+      "doctorId": "doc-neha",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-19A",
+      "date": "2026-11-04",
+      "time": "16:15",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo rheumatologist consultation"
+    },
+    {
+      "id": "DEMO-APT-19-1",
+      "doctorId": "doc-neha",
+      "patientId": "patient-sana",
+      "consultationId": "DEMO-PRO-19B",
+      "date": "2026-11-04",
+      "time": "12:45",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
+    },
+    {
+      "id": "DEMO-APT-20-0",
+      "doctorId": "doc-farah",
+      "patientId": "patient-demo",
+      "consultationId": "DEMO-PRO-20A",
+      "date": "2026-11-04",
+      "time": "17:00",
+      "mode": "Video",
+      "status": "scheduled",
+      "reason": "Demo dietitian & nutritionist consultation"
+    },
+    {
+      "id": "DEMO-APT-20-1",
+      "doctorId": "doc-farah",
+      "patientId": "patient-sana",
+      "consultationId": "DEMO-PRO-20B",
+      "date": "2026-11-04",
+      "time": "17:30",
+      "mode": "In-clinic",
+      "status": "scheduled",
+      "reason": "Fictional follow-up visit"
     }
   ],
   "feedback": [
@@ -1091,7 +1901,97 @@
       "text": "Demo feedback: the visit was easy to follow and well organised.",
       "reply": "",
       "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-11",
+      "doctorId": "doc-sanjay",
+      "patientId": "patient-ved",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-12",
+      "doctorId": "doc-pooja",
+      "patientId": "patient-mira",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-13",
+      "doctorId": "doc-rajiv",
+      "patientId": "patient-aman",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-14",
+      "doctorId": "doc-shalini",
+      "patientId": "patient-riya",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-15",
+      "doctorId": "doc-harpreet",
+      "patientId": "patient-yash",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-16",
+      "doctorId": "doc-anjali",
+      "patientId": "patient-neel",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-17",
+      "doctorId": "doc-mohit",
+      "patientId": "patient-ved",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-18",
+      "doctorId": "doc-imran",
+      "patientId": "patient-aman",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-19",
+      "doctorId": "doc-neha",
+      "patientId": "patient-sana",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
+    },
+    {
+      "id": "DEMO-FB-20",
+      "doctorId": "doc-farah",
+      "patientId": "patient-sana",
+      "rating": 5,
+      "text": "Demo feedback: the visit was easy to follow and well organised.",
+      "reply": "",
+      "date": "2026-11-03"
     }
   ],
-  "revision": 2
+  "revision": 3
 }

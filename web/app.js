@@ -161,12 +161,20 @@ function load() {
       (x) => !(current || []).some((y) => y.id === x.id),
     ),
   ];
-  if (!state.doctorRevision) {
+  // Revision 3 adds doctors 11-20: bring saved data forward without touching existing records.
+  if ((state.doctorRevision || 0) < 3) {
     state.consultations = merge(state.consultations, seed.consultations);
     state.messages = merge(state.messages, seed.messages);
-    state.doctorRevision = 2;
+    if (state.appointments)
+      state.appointments = merge(state.appointments, seed.appointments);
+    if (state.feedback) state.feedback = merge(state.feedback, seed.feedback);
+    state.doctorRevision = 3;
   }
-  state.doctors = merge(state.doctors, seed.doctors);
+  state.doctors = merge(state.doctors, seed.doctors).map((x) =>
+    x.age == null
+      ? { ...x, age: seed.doctors.find((y) => y.id === x.id)?.age }
+      : x,
+  );
   state.patients = merge(state.patients, seed.patients);
   state.patients = state.patients.map((p) =>
     p.id === state.profile.id ? { ...p, ...state.profile } : p,
@@ -477,7 +485,7 @@ function doctors() {
 function doctor(id) {
   const doc = d(id);
   if (!doc) return notFound();
-  return `${header("Doctor profile", "Fictional profile for interface testing", "doctors")}<div class="panel detail-card">${doctorRow(doc)}<p class="small muted" style="margin-top:15px">${esc(doc.qualification)} · ${doc.experience} years of experience</p><hr class="divider"><h3>About ${esc(doc.name)}</h3><p class="small muted" style="margin-top:10px;line-height:1.9">A fictional ${doc.specialty.toLowerCase()} profile created to demonstrate Practo-style doctor discovery. Credentials, ratings, fees and clinic details are illustrative.</p><hr class="divider"><dl class="data-grid"><div><dt>Clinic</dt><dd>${esc(doc.clinic)}</dd></div><div><dt>Location</dt><dd>${esc(doc.area)}, ${esc(state.profile.city)}</dd></div><div><dt>Consultation fee</dt><dd>₹${doc.fee} · Demo price</dd></div><div><dt>Patient stories</dt><dd>${doc.stories} · Illustrative</dd></div></dl><div class="card-actions" style="margin-top:25px"><button class="outline-btn" data-action="unavailable">${I("phone")}Contact clinic</button><button class="primary-btn" data-action="unavailable">${I("calendar")}Book clinic visit</button></div></div>`;
+  return `${header("Doctor profile", "Fictional profile for interface testing", "doctors")}<div class="panel detail-card">${doctorRow(doc)}<p class="small muted" style="margin-top:15px">${esc(doc.qualification)} · ${doc.experience} years of experience</p><hr class="divider"><h3>About ${esc(doc.name)}</h3><p class="small muted" style="margin-top:10px;line-height:1.9">A fictional ${doc.specialty.toLowerCase()} profile created to demonstrate Practo-style doctor discovery. Credentials, ratings, fees and clinic details are illustrative.</p><hr class="divider"><dl class="data-grid">${doc.age ? `<div><dt>Age</dt><dd>${doc.age} years</dd></div>` : ""}<div><dt>Clinic</dt><dd>${esc(doc.clinic)}</dd></div><div><dt>Location</dt><dd>${esc(doc.area)}, ${esc(state.profile.city)}</dd></div><div><dt>Consultation fee</dt><dd>₹${doc.fee} · Demo price</dd></div><div><dt>Patient stories</dt><dd>${doc.stories} · Illustrative</dd></div></dl><div class="card-actions" style="margin-top:25px"><button class="outline-btn" data-action="unavailable">${I("phone")}Contact clinic</button><button class="primary-btn" data-action="unavailable">${I("calendar")}Book clinic visit</button></div></div>`;
 }
 const catalogs = {
   medicines: {
@@ -557,7 +565,7 @@ function account() {
       "pro/dashboard",
       "stethoscope",
       "Doctor workspace",
-      "10 fictional doctors · Manage consultations and documents",
+      "20 fictional doctors · Manage consultations and documents",
     ],
     ["family", "users", "Family members", "Manage your family’s demo profiles"],
     ["appointments", "calendar", "Appointments", "Your clinic visits"],

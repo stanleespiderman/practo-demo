@@ -18,7 +18,7 @@ Use this for a fresh run. Checkboxes are intentionally unchecked; historical evi
 - [ ] Fail-next/offline simulation → Failed; recipient sees no delivered bubble; retry delivers one.
 - [ ] Open recipient conversation, clear unread count, reload and confirm history persists.
 - [ ] Use two same-origin tabs for manual patient/assigned-doctor replies; clearly label this local test.
-- [ ] Switch all ten doctors; correct profile, assigned charts, notes and inbox are shown.
+- [ ] Switch all twenty doctors; correct profile, assigned charts, notes and inbox are shown.
 - [ ] Save private note and document draft; patient UI cannot see the draft. Share once; attachment and records persist.
 - [ ] PDF downloads, repeats DEMO mark and renders long/multipage content without clipping.
 - [ ] Create conflicting appointment, reschedule, check in and cancel; associated consultation stays consistent.

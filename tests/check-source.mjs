@@ -15,7 +15,12 @@ assert.equal(
 const seed = JSON.parse(a),
   doctors = new Set(seed.doctors.map((d) => d.id)),
   cons = new Set(seed.consultations.map((c) => c.id));
-assert.equal(doctors.size, 10, "Exactly 10 fictional doctors");
+assert.equal(doctors.size, 20, "Exactly 20 fictional doctors");
+for (const doctor of seed.doctors)
+  assert(
+    doctor.age >= 35 && doctor.age <= 55,
+    doctor.id + " age must be 35-55",
+  );
 assert.equal(
   new Set(seed.patients.map((p) => p.id)).size,
   seed.patients.length,

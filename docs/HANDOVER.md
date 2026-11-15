@@ -17,7 +17,7 @@ The owner has explicitly requested **no APK before final approval**. No APK/AAB 
 | Patient Home and discovery | Home, service tiles, doctor cards/profiles, search and broader navigation | Browser flows exercised; specialty-filter coverage needs correction/testing |
 | Consultations | Persistent active/completed records, list, details, consistent IDs and chat navigation | Browser path exercised; native compilation/device pass pending |
 | Text chat | Local send/retry states, unread clearing, timestamps, history and role switching | Same-browser tabs exercised; real two-device messaging absent |
-| Ten doctor profiles | Fictional profiles, selection and locally editable profile information | All ten switched in browser; native parity review pending |
+| Twenty doctor profiles | Fictional profiles, selection and locally editable profile information | First ten switched in browser; the added ten are seed-checked only; native parity review pending |
 | Doctor workspace | Overview, assigned inbox, patient charts, private notes and manual replies | Browser workflows exercised; local filtering is not security |
 | Medical documents | Summary/Rx, lab-request/certificate demo drafts, preview, share and PDF export | Browser download/share exercised; native picker and PDF edge cases pending |
 | Doctor calendar | Local create/reschedule/check-in/cancel with slot checks | Browser conflict/reschedule exercised; no external booking integration |

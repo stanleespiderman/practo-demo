@@ -48,7 +48,7 @@ Download the [five-page handover PDF](docs/Practo-Developer-Handover.pdf) for a 
 
 ## Current status
 
-Patient navigation, local consultations/chat and the 10-doctor workspace are implemented as local demos. The browser workflows were exercised on 4 November 2026. Native source is supplied, but Android compilation, unit-test execution and device testing remain unverified. Source/format/build checks are separate from device tests.
+Patient navigation, local consultations/chat and the 20-doctor workspace are implemented as local demos. The browser workflows were exercised on 4 November 2026. Native source is supplied, but Android compilation, unit-test execution and device testing remain unverified. Source/format/build checks are separate from device tests.
 
 Real authentication, multi-device messaging, push notifications, clinical backend storage, real booking, payments and calls are unconnected. A backend URL/key alone will not enable these features. See [backend plan](backend/README.md).
 

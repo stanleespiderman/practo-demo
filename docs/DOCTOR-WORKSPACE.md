@@ -1,6 +1,6 @@
 # Doctor workspace — review revision 2
 
-Open the review site and select **Doctor workspace** on Home, in the sidebar or under Account. Choose any of the 10 fictional doctors from the doctor selector. On a narrow screen, use **Switch doctor** in the top bar and **More** in the bottom navigation.
+Open the review site and select **Doctor workspace** on Home, in the sidebar or under Account. Choose any of the 20 fictional doctors from the doctor selector. On a narrow screen, use **Switch doctor** in the top bar and **More** in the bottom navigation.
 
 ## Local workflows implemented
 
